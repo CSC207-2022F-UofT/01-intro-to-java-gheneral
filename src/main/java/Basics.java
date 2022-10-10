@@ -7,6 +7,8 @@
  * relevant readings for each task.
  */
 
+import java.util.ArrayList;
+
 /**
  *  1. In Java, no code can exist outside of a class. Unlike Python which uses
  *    functions, all code in Java uses methods.
@@ -43,6 +45,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        String var = new String("Hello World!");
 
 
 
@@ -62,6 +65,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+        int my_variable = 100;
 
 
 
@@ -99,7 +103,12 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        for(int i=10; i>-1; i--) {
+            System.out.println("Current count: " + Integer.toString(i));
+        }
 
+        split("Idol Long Oolong Vertical Europe University Toyota" +
+                "     * should return ILOVEUT");
 
     }
 
@@ -141,9 +150,11 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-
         // Fill in the rest of the body here
-
+        String[] arrOfStr = to_split.split(" ", 7);
+        for (String a : arrOfStr)
+            ret.append(a.charAt(0));
+        System.out.println(ret);
         return ret.toString();
     }
 
@@ -171,6 +182,14 @@ public class Basics {
          *                (e.g. arr[i] gives you the item at index i).
          */
 
+        int length = arr.length;
+        if (length > 2) {
+            for (int i = 0; i < length; i++) {
+                if (i%2==1) {
+                    current_sum += arr[i];
+                }
+            };
+        }
         return current_sum;
     }
 
