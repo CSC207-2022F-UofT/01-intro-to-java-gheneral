@@ -46,6 +46,7 @@ public class Basics {
          *                Hello World!
          */
         String var = new String("Hello World!");
+        System.out.println(var);
 
 
 
@@ -183,7 +184,7 @@ public class Basics {
          */
 
         int length = arr.length;
-        if (length > 2) {
+        if (length > 1) {
             for (int i = 0; i < length; i++) {
                 if (i%2==1) {
                     current_sum += arr[i];
